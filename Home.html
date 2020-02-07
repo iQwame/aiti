@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href=".png">
+	<link rel="stylesheet" type="text/css" href="Horizontal Navigation Bar.css">
+	<meta charset="utf-8">
+	<title>Nav Bar</title>
+</head>
+<body>
+	<p></p>
+
+	<ul>
+  <li><a href="Home.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="CONTACT.html">Contact</a></li>
+  <li><a href="Gallery.html">Gallery</a></li>
+</ul><br>
+<header> <img src="Trashfindx.png" width="30%" alt="Paris" class="center" > </header><br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="frosted.jpg" style="width:80%">
+  <div class="text">Autumn</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="rocket.jpg" style="width:80%">
+  <div class="text">Space</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="me.jpg" style="width:80%">
+  <div class="text">Singapore</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<h1 align="center">Our Vision</h1>
+<p align="center">To help our country become one of the neatest countries in the world by curbing fly-tipping</p>
+<h1 align="center">Our Approach</h1>
+<p align="center">The current state of our health and hygiene in the country truthfully is not much to write home about. All the stakeholders in the country recognize that we have a problem but the solution is what is had to come by. A solution that involves all stakeholders and provide a sense of inclusion in the solution to be executed in reducing the current state of pollution and fly tipping in the country. Recently the Government initiated the commissioning of dust bins near bus stops as a way of dealing with the problem but what was lacking was the involvement of the citizens as well as how often the bins provided are emptied. Last year during the raining season they was a viral video of two women emptying a sack of rubbish into the gutter counting on the rain water to carry it to where ever it may end. Evidence of the impact of our activities is shown by our beach fronts where hips and hips of plastic waste is washed out to sea and back again to the seashore.  </p>
+
+<h1 align="center">WE ARE HERE TO HELP</h1>
+
+
+</body>
+</html>
